@@ -1,0 +1,36 @@
+<view>
+    <button bind:tap="onTapLogin">登录</button>
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取用户信息</button>
+    <button open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber">获取用户手机号</button>
+
+    <view>
+        <view>登录</view>
+        <view>
+            <view>
+                <text>session_key:{{loginRes.session_key}}</text>
+            </view>
+            <view>
+                <text>openid:{{loginRes.openid}}</text>
+            </view>
+            <view>
+                <text>unionid:{{loginRes.unionid}}</text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view>获取用户信息</view>
+        <view>
+            <view>
+                <text>nickName:{{userInfoRes.nickName}}</text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view>获取手机号</view>
+        <view>
+            <view>
+                <text>phoneNumber:{{phoneRes.phoneNumber}}</text>
+            </view>
+        </view>
+    </view>
+</view>
